@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="15dp"
+        android:text="Personas que quizá Conozacas"
+        app:layout_constraintLeft_toLeftOf="@id/ivObjectThumbnail"
+        app:layout_constraintRight_toRightOf="@id/ivObjectThumbnail"
+        app:layout_constraintTop_toTopOf="@id/ivObjectThumbnail"
+        app:layout_constraintTop_toBottomOf="@id/ivObjectThumbnail"
+        android:maxLines="3"
+        />
+
+    <ImageView
+        android:id="@+id/ivObjectThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/translucent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvObjectName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivObjectThumbnail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvCommon"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="20dp"
+        android:text="Example of a person title"
+        android:maxLines="3"
+        />
+
+    <TextView
+        android:id="@+id/tvFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text=" Amigos en común"
+        app:layout_constraintLeft_toRightOf="@id/tvCommon"
+        app:layout_constraintTop_toBottomOf="@id/tvObjectName"
+        android:layout_marginRight="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tvCommon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="  4 "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvCommon"
+        app:layout_constraintTop_toBottomOf="@id/tvObjectName"
+        android:layout_marginHorizontal="5dp"
+        />
+
+    <Button
+        android:id="@+id/ButtonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Agregar"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tvCommon"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/ButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:backgroundTint="@color/translucent"
+        android:text="Eliminar"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFriends"
+        app:layout_constraintLeft_toRightOf="@id/ButtonAdd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
